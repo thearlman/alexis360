@@ -26,6 +26,14 @@
 <script type="text/javascript">
   let path1 = './img/sculpture1/scul';
   pdt360DegViewer('scul1', 16, path1, 'jpg', false, false, true, false, false, false, false);
+  let thing = document.getElementById('scul1');
+  thing.addEventListener('wheel', function(){
+    event.preventDefault();
+    let theImage = document.getElementsByClassName('scul1')[0];
+    let imageWidth = parseInt(window.getComputedStyle(theImage, null).width);
+    theImage.style.width = imageWidth + event.wheelDelta + 'px';
+    console.log(imageWidth);
+  })
   pdt360DegViewer('scul2', 16, path1, 'jpg', false, false, false, false, false, false, true);
   pdt360DegViewer('scul3', 16, path1, 'jpg', false, false, false, true, false, false, false);
   pdt360DegViewer('scul4', 16, path1, 'jpg', true, false, false, false, false, false, false);

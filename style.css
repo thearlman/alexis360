@@ -19,6 +19,9 @@ body{
   justify-content: center;
   border: solid 1px white;
   padding: 10px;
+  width: 75vh;
+  height: 75vh;
+
 }
 .viewer img{
   width: 75vh;
@@ -28,7 +31,16 @@ body{
 #scul1{
   cursor: grab;
   max-height: max-content;
+  overflow: hidden;
 }
+
+#scul1 img{
+  width: 75vh;
+  max-height: 50000vh;
+  object-fit: contain;
+}
+
+
 #scul:active {
   cursor: grabbing;
 }
